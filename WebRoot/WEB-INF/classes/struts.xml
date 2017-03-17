@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <!-- android/ios端数据传输 -->
+  <package name="json" extends="json-default">
+    <action name="getBanner" class="org.action.Test1" method="getBanner">
+      <result type="json"></result>
+    </action>
+    <action name="login" class="org.action.Test1" method="login">
+      <result type="json"></result>
+    </action>
+  </package>
+  
+  
+  
+  <!-- web端数据传输 -->
+  <package name="default" extends="struts-default">
+    <action name="webGet" method="getA" class="org.action.Test">
+	    <result name="success">/index.jsp</result>
+    </action>
+  </package>
+</struts>    
